@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Form2Flow", "Form2Flow\Form2Flow.vbproj", "{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Form2Flow.Tests", "Form2Flow.Tests\Form2Flow.Tests.vbproj", "{D86ED0CB-E893-418A-BA35-B9DC8C11C2C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86ED0CB-E893-418A-BA35-B9DC8C11C2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86ED0CB-E893-418A-BA35-B9DC8C11C2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86ED0CB-E893-418A-BA35-B9DC8C11C2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86ED0CB-E893-418A-BA35-B9DC8C11C2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C05C1C9-3F14-4C8A-A7C7-089DF6A41D0A}
+	EndGlobalSection
+EndGlobal
