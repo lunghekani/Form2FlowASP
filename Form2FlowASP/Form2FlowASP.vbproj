@@ -410,6 +410,7 @@
     <Content Include="Pages\assets\_scss\vendor\_simplemde.scss" />
     <Content Include="Pages\assets\_scss\vendor\_slick.scss" />
     <Content Include="Pages\assets\_scss\vendor\_summernote.scss" />
+    <Content Include="Pages\auth\index.aspx" />
     <Content Include="Pages\builder\dist\css\keditor-components.css.map" />
     <Content Include="Pages\builder\dist\css\keditor.css.map" />
     <Content Include="Pages\builder\dist\js\keditor-components.js.map" />
@@ -5156,6 +5157,13 @@
     </Compile>
     <Compile Include="Pages\Admin\admin-timeline-view.aspx.vb">
       <DependentUpon>admin-timeline-view.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\auth\index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\auth\index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
