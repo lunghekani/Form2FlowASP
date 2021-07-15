@@ -17,7 +17,9 @@
                             <a class="dropdown-item" href="javascript:void(0)">
                                 <i class="fa fa-fw fa-pencil-alt mr-1"></i>Edit Process Map
                             </a>
-
+                            <a class="dropdown-item" href="javascript:void(0)">
+                                <i class="fa fa-fw fa-pencil-alt mr-1"></i>Add Forms 
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -46,12 +46,48 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -84,6 +120,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net48\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -98,6 +137,9 @@
     </Reference>
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net48\Zstandard.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -411,6 +453,11 @@
     <Content Include="Pages\assets\_scss\vendor\_slick.scss" />
     <Content Include="Pages\assets\_scss\vendor\_summernote.scss" />
     <Content Include="Pages\auth\index.aspx" />
+    <Content Include="Pages\builder\.babelrc" />
+    <Content Include="Pages\builder\.github\ISSUE_TEMPLATE\bug_report.md" />
+    <Content Include="Pages\builder\.github\ISSUE_TEMPLATE\component-request.md" />
+    <Content Include="Pages\builder\.github\ISSUE_TEMPLATE\feature_request.md" />
+    <Content Include="Pages\builder\.gitignore" />
     <Content Include="Pages\builder\dist\css\keditor-components.css.map" />
     <Content Include="Pages\builder\dist\css\keditor.css.map" />
     <Content Include="Pages\builder\dist\js\keditor-components.js.map" />
@@ -463,6 +510,19 @@
     <Content Include="Pages\builder\examples\plugins\font-awesome-4.7.0\fonts\FontAwesome.otf" />
     <Content Include="Pages\builder\examples\plugins\jquery-1.11.3\jquery-1.11.3.min.map" />
     <Content Include="Pages\builder\examples\plugins\jquery-ui-1.12.1.custom\package.json" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\.codeclimate.yml" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\.gitignore" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\.jshintignore" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\.jshintrc" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\.npmignore" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\.travis.yml" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\appveyor.yml" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\bower.json" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\build" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\CHANGELOG.md" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\CONTRIBUTING.md" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\ISSUE_TEMPLATE.md" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\jsbeautifyrc" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\config\defaults.json" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\resources\configerror\.jsbeautifyrc" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\resources\editorconfig\.editorconfig" />
@@ -472,6 +532,21 @@
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\resources\indent11chars\.jsbeautifyrc" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\run-tests" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\shell-smoke-test.sh" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\LICENSE" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\package.json" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\debian\.gitignore" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\debian\changelog" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\debian\compat" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\debian\control" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\debian\rules" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\debian\source\format" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\js-beautify" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\js-beautify-profile" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\js-beautify-test" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\tests\shell-smoke-test.sh" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\README.specs.mkd" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\MANIFEST.in" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\README.md" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\test\data\css\node.mustache" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\test\data\css\python.mustache" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\test\data\html\node.mustache" />
@@ -483,34 +558,33 @@
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\tools\release-all.sh" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\third-party\codemirror\LICENSE" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\third-party\codemirror\README.md" />
-    <Content Include="Pages\builder\php\PHPMailer\COMMITMENT" />
-    <Content Include="Pages\builder\php\PHPMailer\composer.json" />
-    <Content Include="Pages\builder\php\PHPMailer\LICENSE" />
-    <Content Include="Pages\builder\php\PHPMailer\README.md" />
-    <Content Include="Pages\builder\php\PHPMailer\SECURITY.md" />
-    <Content Include="Pages\builder\php\PHPMailer\VERSION" />
-    <Content Include="Pages\builder\srcs\styles\keditor-component-form.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor-component-text.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_body.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_button.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_component.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_container.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_content-area.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_iframe.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_jquery-ui.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_modal.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_paste.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_preview.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_sidebar.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_snippet.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_toolbar.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_topbar.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_ui.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_utilities.less" />
-    <Content Include="Pages\builder\srcs\styles\keditor\_wrapper.less" />
-    <Content Include="Pages\builder\srcs\styles\_mixins.less" />
-    <Content Include="Pages\builder\srcs\styles\_variables.less" />
+    <Content Include="Pages\builder\LICENSE.md" />
+    <Content Include="Pages\builder\package-lock.json" />
+    <Content Include="Pages\builder\package.json" />
+    <Content Include="Pages\builder\README.md" />
+    <Content Include="Pages\builder\conn.php" />
+    <Content Include="Pages\builder\src\styles\keditor-component-form.less" />
+    <Content Include="Pages\builder\src\styles\keditor-component-text.less" />
+    <Content Include="Pages\builder\src\styles\keditor.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_body.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_button.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_component.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_container.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_content-area.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_iframe.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_jquery-ui.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_modal.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_paste.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_preview.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_sidebar.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_snippet.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_toolbar.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_topbar.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_ui.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_utilities.less" />
+    <Content Include="Pages\builder\src\styles\keditor\_wrapper.less" />
+    <Content Include="Pages\builder\src\styles\_mixins.less" />
+    <Content Include="Pages\builder\src\styles\_variables.less" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Pages\assets\css\oneui.css" />
     <Content Include="Pages\assets\css\oneui.min.css" />
@@ -4159,20 +4233,18 @@
     <Content Include="Pages\be_ui_timeline.html" />
     <Content Include="Pages\be_ui_tooltips.html" />
     <Content Include="Pages\be_ui_typography.html" />
-    <Content Include="Pages\builder\combine.html" />
+    <Content Include="Pages\index.html" />
     <Content Include="Pages\builder\dist\css\keditor-components.css" />
     <Content Include="Pages\builder\dist\css\keditor.css" />
     <Content Include="Pages\builder\dist\js\keditor-components.js" />
     <Content Include="Pages\builder\dist\js\keditor.js" />
+    <Content Include="Pages\builder\dist\js\saving.php" />
     <Content Include="Pages\builder\examples\basic_with_blank_content.html" />
     <Content Include="Pages\builder\examples\basic_with_content.html" />
     <Content Include="Pages\builder\examples\css\examples.css" />
     <Content Include="Pages\builder\examples\custom_size.html" />
     <Content Include="Pages\builder\examples\extra_settings.html" />
-    <Content Include="Pages\builder\examples\index.html" />
-    <Content Include="Pages\builder\examples\js\custom.js" />
     <Content Include="Pages\builder\examples\js\examples.js" />
-    <Content Include="Pages\builder\examples\js\show_content.js" />
     <Content Include="Pages\builder\examples\multi_content_area.html" />
     <Content Include="Pages\builder\examples\plugins\bootstrap-3.4.1\css\bootstrap-theme.css" />
     <Content Include="Pages\builder\examples\plugins\bootstrap-3.4.1\css\bootstrap-theme.min.css" />
@@ -4674,6 +4746,7 @@
     <Content Include="Pages\builder\examples\plugins\jquery-ui-1.12.1.custom\LICENSE.txt" />
     <Content Include="Pages\builder\examples\plugins\jquery-ui.touch-punch-0.2.3\jquery.ui.touch-punch.js" />
     <Content Include="Pages\builder\examples\plugins\jquery-ui.touch-punch-0.2.3\jquery.ui.touch-punch.min.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\index.html" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\bin\css-beautify.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\bin\html-beautify.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\bin\js-beautify.js" />
@@ -4682,6 +4755,10 @@
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\lib\beautify-html.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\lib\beautify.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\lib\cli.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\lib\unpackers\javascriptobfuscator_unpacker.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\lib\unpackers\myobfuscate_unpacker.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\lib\unpackers\p_a_c_k_e_r_unpacker.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\lib\unpackers\urlencode_unpacker.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\src\core\acorn.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\src\core\inputscanner.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\src\core\options.js" />
@@ -4708,6 +4785,47 @@
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\resources\example1.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\resources\indent11chars\subDir1\subDir2\empty.txt" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\js\test\sanitytest.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\cssbeautifier\css\beautifier.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\cssbeautifier\css\options.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\cssbeautifier\css\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\cssbeautifier\tests\generated\tests.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\cssbeautifier\tests\generated\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\cssbeautifier\tests\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\cssbeautifier\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\js-beautify-test.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\core\acorn.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\core\inputscanner.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\core\options.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\core\output.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\core\token.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\core\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\javascript\beautifier.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\javascript\options.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\javascript\tokenizer.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\javascript\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\tests\generated\tests.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\tests\generated\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\tests\test-perf-jsbeautifier.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\tests\testindentation.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\tests\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\evalbased.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\javascriptobfuscator.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\myobfuscate.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\packer.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\test-myobfuscate-input.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\test-myobfuscate-output.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\test-packer-62-input.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\test-packer-non62-input.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\testjavascriptobfuscator.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\testmyobfuscate.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\testpacker.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\testurlencode.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\tests\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\urlencode.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\unpackers\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\__init__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\jsbeautifier\__version__.py" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\python\setup.py" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\test\data\css\tests.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\test\data\html\tests.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\test\data\javascript\inputlib.js" />
@@ -4722,6 +4840,7 @@
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\tools\template\beautify-html.end.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\tools\template\beautify.begin.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\tools\template\beautify.end.js" />
+    <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\webpack.config.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\favicon.png" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\third-party\codemirror\lib\codemirror.css" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\third-party\codemirror\lib\codemirror.js" />
@@ -4731,263 +4850,141 @@
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\third-party\codemirror\mode\javascript\typescript.html" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\third-party\jquery\jquery.cookie.js" />
     <Content Include="Pages\builder\examples\plugins\js-beautify-1.7.5\web\third-party\jquery\jquery.js" />
+    <Content Include="Pages\builder\examples\saving.php" />
     <Content Include="Pages\builder\examples\settings_for_container.html" />
+    <Content Include="Pages\builder\examples\snippets\dynamic_content.html" />
+    <Content Include="Pages\builder\examples\snippets\img\somewhere_bangladesh.jpg" />
+    <Content Include="Pages\builder\examples\snippets\img\somewhere_bangladesh_squared.jpg" />
+    <Content Include="Pages\builder\examples\snippets\img\sydney_australia.jpg" />
+    <Content Include="Pages\builder\examples\snippets\img\sydney_australia_squared.jpg" />
+    <Content Include="Pages\builder\examples\snippets\img\wellington_newzealand.jpg" />
+    <Content Include="Pages\builder\examples\snippets\img\wellington_newzealand_squared.jpg" />
+    <Content Include="Pages\builder\examples\snippets\img\yenbai_vietnam.jpg" />
+    <Content Include="Pages\builder\examples\snippets\img\yenbai_vietnam_squared.jpg" />
+    <Content Include="Pages\builder\examples\snippets\preview\articles_list.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\audio.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\featured_article.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\form.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\googlemap.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\heading_1.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\heading_2.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\jumbotron.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\media_panel.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\page_header.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\photo.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\row_12.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\row_3_3_3_3.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\row_3_6_3.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\row_4_4_4.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\row_4_8.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\row_6_6.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\row_8_4.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\text.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\thumbnail_panel.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\video.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\vimeo.png" />
+    <Content Include="Pages\builder\examples\snippets\preview\youtube.png" />
+    <Content Include="Pages\builder\examples\snippets\snippets.html" />
     <Content Include="Pages\builder\examples\support_touch_device.html" />
-    <Content Include="Pages\builder\Files\test\1605781514920.png" />
-    <Content Include="Pages\builder\Files\test\1605781526320.png" />
-    <Content Include="Pages\builder\Files\test\1605781622034.png" />
-    <Content Include="Pages\builder\formid0.html" />
-    <Content Include="Pages\builder\formid1.html" />
-    <Content Include="Pages\builder\formid10.html" />
-    <Content Include="Pages\builder\formid11.html" />
-    <Content Include="Pages\builder\formid12.html" />
-    <Content Include="Pages\builder\formid13.html" />
-    <Content Include="Pages\builder\formid14.html" />
-    <Content Include="Pages\builder\formid15.html" />
-    <Content Include="Pages\builder\formid16.html" />
-    <Content Include="Pages\builder\formid17.html" />
-    <Content Include="Pages\builder\formid18.html" />
-    <Content Include="Pages\builder\formid19.html" />
-    <Content Include="Pages\builder\formid2.html" />
-    <Content Include="Pages\builder\formid20.html" />
-    <Content Include="Pages\builder\formid21.html" />
-    <Content Include="Pages\builder\formid22.html" />
-    <Content Include="Pages\builder\formid23.html" />
-    <Content Include="Pages\builder\formid24.html" />
-    <Content Include="Pages\builder\formid25.html" />
-    <Content Include="Pages\builder\formid26.html" />
-    <Content Include="Pages\builder\formid27.html" />
-    <Content Include="Pages\builder\formid28.html" />
-    <Content Include="Pages\builder\formid29.html" />
-    <Content Include="Pages\builder\formid3.html" />
-    <Content Include="Pages\builder\formid30.html" />
-    <Content Include="Pages\builder\formid31.html" />
-    <Content Include="Pages\builder\formid32.html" />
-    <Content Include="Pages\builder\formid33.html" />
-    <Content Include="Pages\builder\formid34.html" />
-    <Content Include="Pages\builder\formid35.html" />
-    <Content Include="Pages\builder\formid36.html" />
-    <Content Include="Pages\builder\formid37.html" />
-    <Content Include="Pages\builder\formid38.html" />
-    <Content Include="Pages\builder\formid39.html" />
-    <Content Include="Pages\builder\formid4.html" />
-    <Content Include="Pages\builder\formid40.html" />
-    <Content Include="Pages\builder\formid41.html" />
-    <Content Include="Pages\builder\formid42.html" />
-    <Content Include="Pages\builder\formid43.html" />
-    <Content Include="Pages\builder\formid44.html" />
-    <Content Include="Pages\builder\formid45.html" />
-    <Content Include="Pages\builder\formid46.html" />
-    <Content Include="Pages\builder\formid47.html" />
-    <Content Include="Pages\builder\formid48.html" />
-    <Content Include="Pages\builder\formid49.html" />
-    <Content Include="Pages\builder\formid5.html" />
-    <Content Include="Pages\builder\formid50.html" />
-    <Content Include="Pages\builder\formid6.html" />
-    <Content Include="Pages\builder\formid7.html" />
-    <Content Include="Pages\builder\formid8.html" />
-    <Content Include="Pages\builder\formid9.html" />
-    <Content Include="Pages\builder\form_builder.sql" />
+    <Content Include="Pages\builder\examples\testing.aspx" />
     <Content Include="Pages\builder\index.html" />
-    <Content Include="Pages\builder\php\connect.php" />
-    <Content Include="Pages\builder\php\emails.php" />
-    <Content Include="Pages\builder\php\get_data.php" />
-    <Content Include="Pages\builder\php\get_form_data.php" />
-    <Content Include="Pages\builder\php\hidden insert data.php" />
-    <Content Include="Pages\builder\php\insert_data.php" />
-    <Content Include="Pages\builder\php\insert_form_data.php" />
-    <Content Include="Pages\builder\php\PHPMailer\get_oauth_token.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-af.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ar.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-az.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ba.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-be.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-bg.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ca.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ch.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-cs.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-da.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-de.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-el.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-eo.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-es.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-et.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-fa.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-fi.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-fo.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-fr.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-gl.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-he.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-hi.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-hr.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-hu.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-hy.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-id.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-it.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ja.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ka.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ko.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-lt.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-lv.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-mg.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ms.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-nb.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-nl.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-pl.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-pt.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-pt_br.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ro.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-ru.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-sk.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-sl.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-sr.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-sv.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-tl.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-tr.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-uk.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-vi.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-zh.php" />
-    <Content Include="Pages\builder\php\PHPMailer\language\phpmailer.lang-zh_cn.php" />
-    <Content Include="Pages\builder\php\PHPMailer\src\Exception.php" />
-    <Content Include="Pages\builder\php\PHPMailer\src\OAuth.php" />
-    <Content Include="Pages\builder\php\PHPMailer\src\PHPMailer.php" />
-    <Content Include="Pages\builder\php\PHPMailer\src\POP3.php" />
-    <Content Include="Pages\builder\php\PHPMailer\src\SMTP.php" />
-    <Content Include="Pages\builder\php\process.php" />
-    <Content Include="Pages\builder\show_content %281%29.html" />
-    <Content Include="Pages\builder\show_content.html" />
-    <Content Include="Pages\builder\show_content_backup.html" />
-    <Content Include="Pages\builder\show_content_single.html" />
-    <Content Include="Pages\builder\snippets\dynamic_content.html" />
-    <Content Include="Pages\builder\snippets\img\somewhere_bangladesh.jpg" />
-    <Content Include="Pages\builder\snippets\img\somewhere_bangladesh_squared.jpg" />
-    <Content Include="Pages\builder\snippets\img\sydney_australia.jpg" />
-    <Content Include="Pages\builder\snippets\img\sydney_australia_squared.jpg" />
-    <Content Include="Pages\builder\snippets\img\wellington_newzealand.jpg" />
-    <Content Include="Pages\builder\snippets\img\wellington_newzealand_squared.jpg" />
-    <Content Include="Pages\builder\snippets\img\yenbai_vietnam.jpg" />
-    <Content Include="Pages\builder\snippets\img\yenbai_vietnam_squared.jpg" />
-    <Content Include="Pages\builder\snippets\preview\articles_list.png" />
-    <Content Include="Pages\builder\snippets\preview\audio.png" />
-    <Content Include="Pages\builder\snippets\preview\featured_article.png" />
-    <Content Include="Pages\builder\snippets\preview\form.png" />
-    <Content Include="Pages\builder\snippets\preview\googlemap.png" />
-    <Content Include="Pages\builder\snippets\preview\heading_1.png" />
-    <Content Include="Pages\builder\snippets\preview\heading_2.png" />
-    <Content Include="Pages\builder\snippets\preview\jumbotron.png" />
-    <Content Include="Pages\builder\snippets\preview\media_panel.png" />
-    <Content Include="Pages\builder\snippets\preview\page_header.png" />
-    <Content Include="Pages\builder\snippets\preview\photo.png" />
-    <Content Include="Pages\builder\snippets\preview\row_12.png" />
-    <Content Include="Pages\builder\snippets\preview\row_3_3_3_3.png" />
-    <Content Include="Pages\builder\snippets\preview\row_3_6_3.png" />
-    <Content Include="Pages\builder\snippets\preview\row_4_4_4.png" />
-    <Content Include="Pages\builder\snippets\preview\row_4_8.png" />
-    <Content Include="Pages\builder\snippets\preview\row_6_6.png" />
-    <Content Include="Pages\builder\snippets\preview\row_8_4.png" />
-    <Content Include="Pages\builder\snippets\preview\text.png" />
-    <Content Include="Pages\builder\snippets\preview\thumbnail_panel.png" />
-    <Content Include="Pages\builder\snippets\preview\video.png" />
-    <Content Include="Pages\builder\snippets\preview\vimeo.png" />
-    <Content Include="Pages\builder\snippets\preview\youtube.png" />
-    <Content Include="Pages\builder\snippets\snippets.html" />
-    <Content Include="Pages\builder\srcs\components\index.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-audio.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-form.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-googlemap.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-photo.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-text.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-video.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-vimeo.js" />
-    <Content Include="Pages\builder\srcs\components\keditor-component-youtube.js" />
-    <Content Include="Pages\builder\srcs\keditor\component\convertToComponent.js" />
-    <Content Include="Pages\builder\srcs\keditor\component\deleteComponent.js" />
-    <Content Include="Pages\builder\srcs\keditor\component\getComponentContent.js" />
-    <Content Include="Pages\builder\srcs\keditor\component\getComponentType.js" />
-    <Content Include="Pages\builder\srcs\keditor\component\initComponent.js" />
-    <Content Include="Pages\builder\srcs\keditor\component\initDynamicContent.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\actionType.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\cssClass.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\defaults.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\deviceMode.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\icon.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\keyMap.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\settingCategory.js" />
-    <Content Include="Pages\builder\srcs\keditor\constants\toolbarType.js" />
-    <Content Include="Pages\builder\srcs\keditor\container\convertToContainer.js" />
-    <Content Include="Pages\builder\srcs\keditor\container\getContainerContent.js" />
-    <Content Include="Pages\builder\srcs\keditor\container\initColumnResizer.js" />
-    <Content Include="Pages\builder\srcs\keditor\container\initContainer.js" />
-    <Content Include="Pages\builder\srcs\keditor\container\initContainerContent.js" />
-    <Content Include="Pages\builder\srcs\keditor\contentArea\initContentArea.js" />
-    <Content Include="Pages\builder\srcs\keditor\contentArea\initContentAreas.js" />
-    <Content Include="Pages\builder\srcs\keditor\destroy.js" />
-    <Content Include="Pages\builder\srcs\keditor\getContent.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnAddContentAfterComponent.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnAddContentAfterContainer.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnComponentCopy.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnComponentCut.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnComponentDelete.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnComponentDuplicate.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnComponentMoveDown.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnComponentMoveUp.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnComponentSetting.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnContainerCopy.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnContainerCut.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnContainerDelete.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnContainerDuplicate.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnContainerMoveDown.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnContainerMoveUp.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnContainerSetting.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initBtnPasteContent.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initIframe.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initIframeActions.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initIframeCover.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initKeyDownAction.js" />
-    <Content Include="Pages\builder\srcs\keditor\iframe\initSelectAction.js" />
-    <Content Include="Pages\builder\srcs\keditor\index.js" />
-    <Content Include="Pages\builder\srcs\keditor\init.js" />
-    <Content Include="Pages\builder\srcs\keditor\modal\hideModal.js" />
-    <Content Include="Pages\builder\srcs\keditor\modal\hideSnippetModal.js" />
-    <Content Include="Pages\builder\srcs\keditor\modal\initModal.js" />
-    <Content Include="Pages\builder\srcs\keditor\modal\initSnippetAction.js" />
-    <Content Include="Pages\builder\srcs\keditor\modal\initSnippetsModal.js" />
-    <Content Include="Pages\builder\srcs\keditor\modal\showModal.js" />
-    <Content Include="Pages\builder\srcs\keditor\modal\showSnippetModal.js" />
-    <Content Include="Pages\builder\srcs\keditor\setContent.js" />
-    <Content Include="Pages\builder\srcs\keditor\sidebar\closeSidebar.js" />
-    <Content Include="Pages\builder\srcs\keditor\sidebar\initExtraSettings.js" />
-    <Content Include="Pages\builder\srcs\keditor\sidebar\initSettingForm.js" />
-    <Content Include="Pages\builder\srcs\keditor\sidebar\initSidebar.js" />
-    <Content Include="Pages\builder\srcs\keditor\sidebar\openSidebar.js" />
-    <Content Include="Pages\builder\srcs\keditor\sidebar\showSettingForm.js" />
-    <Content Include="Pages\builder\srcs\keditor\snippet\addSnippet.js" />
-    <Content Include="Pages\builder\srcs\keditor\snippet\addSnippetToTarget.js" />
-    <Content Include="Pages\builder\srcs\keditor\snippet\beautifyCategories.js" />
-    <Content Include="Pages\builder\srcs\keditor\snippet\initSnippetsFilter.js" />
-    <Content Include="Pages\builder\srcs\keditor\snippet\renderSnippet.js" />
-    <Content Include="Pages\builder\srcs\keditor\snippet\renderSnippetFilter.js" />
-    <Content Include="Pages\builder\srcs\keditor\snippet\renderSnippets.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\initDeviceSwitcher.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\initFullscreenAction.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\initPreviewAction.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\initSaveAction.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\initTopbar.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\initTopbarExtraItems.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\initTopbarRightActions.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\setFullscreenMode.js" />
-    <Content Include="Pages\builder\srcs\keditor\topbar\switchDevice.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\enterFullscreen.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\error.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\exitFullscreen.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\generateId.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\generateToolbar.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\getClickedElement.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\getDataAttributes.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\log.js" />
-    <Content Include="Pages\builder\srcs\keditor\utils\setCopyContent.js" />
+    <Content Include="Pages\builder\src\components\index.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-audio.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-form.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-googlemap.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-photo.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-text.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-video.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-vimeo.js" />
+    <Content Include="Pages\builder\src\components\keditor-component-youtube.js" />
+    <Content Include="Pages\builder\src\keditor\component\convertToComponent.js" />
+    <Content Include="Pages\builder\src\keditor\component\deleteComponent.js" />
+    <Content Include="Pages\builder\src\keditor\component\getComponentContent.js" />
+    <Content Include="Pages\builder\src\keditor\component\getComponentType.js" />
+    <Content Include="Pages\builder\src\keditor\component\initComponent.js" />
+    <Content Include="Pages\builder\src\keditor\component\initDynamicContent.js" />
+    <Content Include="Pages\builder\src\keditor\constants\actionType.js" />
+    <Content Include="Pages\builder\src\keditor\constants\cssClass.js" />
+    <Content Include="Pages\builder\src\keditor\constants\defaults.js" />
+    <Content Include="Pages\builder\src\keditor\constants\deviceMode.js" />
+    <Content Include="Pages\builder\src\keditor\constants\icon.js" />
+    <Content Include="Pages\builder\src\keditor\constants\keyMap.js" />
+    <Content Include="Pages\builder\src\keditor\constants\settingCategory.js" />
+    <Content Include="Pages\builder\src\keditor\constants\toolbarType.js" />
+    <Content Include="Pages\builder\src\keditor\container\convertToContainer.js" />
+    <Content Include="Pages\builder\src\keditor\container\getContainerContent.js" />
+    <Content Include="Pages\builder\src\keditor\container\initColumnResizer.js" />
+    <Content Include="Pages\builder\src\keditor\container\initContainer.js" />
+    <Content Include="Pages\builder\src\keditor\container\initContainerContent.js" />
+    <Content Include="Pages\builder\src\keditor\contentArea\initContentArea.js" />
+    <Content Include="Pages\builder\src\keditor\contentArea\initContentAreas.js" />
+    <Content Include="Pages\builder\src\keditor\destroy.js" />
+    <Content Include="Pages\builder\src\keditor\getContent.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnAddContentAfterComponent.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnAddContentAfterContainer.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnComponentCopy.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnComponentCut.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnComponentDelete.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnComponentDuplicate.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnComponentMoveDown.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnComponentMoveUp.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnComponentSetting.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnContainerCopy.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnContainerCut.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnContainerDelete.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnContainerDuplicate.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnContainerMoveDown.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnContainerMoveUp.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnContainerSetting.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initBtnPasteContent.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initIframe.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initIframeActions.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initIframeCover.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initKeyDownAction.js" />
+    <Content Include="Pages\builder\src\keditor\iframe\initSelectAction.js" />
+    <Content Include="Pages\builder\src\keditor\index.js" />
+    <Content Include="Pages\builder\src\keditor\init.js" />
+    <Content Include="Pages\builder\src\keditor\modal\hideModal.js" />
+    <Content Include="Pages\builder\src\keditor\modal\hideSnippetModal.js" />
+    <Content Include="Pages\builder\src\keditor\modal\initModal.js" />
+    <Content Include="Pages\builder\src\keditor\modal\initSnippetAction.js" />
+    <Content Include="Pages\builder\src\keditor\modal\initSnippetsModal.js" />
+    <Content Include="Pages\builder\src\keditor\modal\showModal.js" />
+    <Content Include="Pages\builder\src\keditor\modal\showSnippetModal.js" />
+    <Content Include="Pages\builder\src\keditor\setContent.js" />
+    <Content Include="Pages\builder\src\keditor\sidebar\closeSidebar.js" />
+    <Content Include="Pages\builder\src\keditor\sidebar\initExtraSettings.js" />
+    <Content Include="Pages\builder\src\keditor\sidebar\initSettingForm.js" />
+    <Content Include="Pages\builder\src\keditor\sidebar\initSidebar.js" />
+    <Content Include="Pages\builder\src\keditor\sidebar\openSidebar.js" />
+    <Content Include="Pages\builder\src\keditor\sidebar\showSettingForm.js" />
+    <Content Include="Pages\builder\src\keditor\snippet\addSnippet.js" />
+    <Content Include="Pages\builder\src\keditor\snippet\addSnippetToTarget.js" />
+    <Content Include="Pages\builder\src\keditor\snippet\beautifyCategories.js" />
+    <Content Include="Pages\builder\src\keditor\snippet\initSnippetsFilter.js" />
+    <Content Include="Pages\builder\src\keditor\snippet\renderSnippet.js" />
+    <Content Include="Pages\builder\src\keditor\snippet\renderSnippetFilter.js" />
+    <Content Include="Pages\builder\src\keditor\snippet\renderSnippets.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\initDeviceSwitcher.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\initFullscreenAction.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\initPreviewAction.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\initSaveAction.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\initTopbar.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\initTopbarExtraItems.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\initTopbarRightActions.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\setFullscreenMode.js" />
+    <Content Include="Pages\builder\src\keditor\topbar\switchDevice.js" />
+    <Content Include="Pages\builder\src\keditor\utils\enterFullscreen.js" />
+    <Content Include="Pages\builder\src\keditor\utils\error.js" />
+    <Content Include="Pages\builder\src\keditor\utils\exitFullscreen.js" />
+    <Content Include="Pages\builder\src\keditor\utils\generateId.js" />
+    <Content Include="Pages\builder\src\keditor\utils\generateToolbar.js" />
+    <Content Include="Pages\builder\src\keditor\utils\getClickedElement.js" />
+    <Content Include="Pages\builder\src\keditor\utils\getDataAttributes.js" />
+    <Content Include="Pages\builder\src\keditor\utils\log.js" />
+    <Content Include="Pages\builder\src\keditor\utils\setCopyContent.js" />
     <Content Include="Pages\builder\tools\publishNewVersion\index.js" />
-    <Content Include="Pages\index.html" />
+    <Content Include="Pages\builder\webpack.config.js" />
     <Content Include="Pages\op_auth_lock.html" />
     <Content Include="Pages\op_auth_lock2.html" />
     <Content Include="Pages\op_auth_reminder.html" />
@@ -5166,6 +5163,13 @@
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Pages\builder\examples\testing.aspx.designer.vb">
+      <DependentUpon>testing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\builder\examples\testing.aspx.vb">
+      <DependentUpon>testing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -5223,8 +5227,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Data_Model\" />
     <Folder Include="Files\" />
-    <Folder Include="Pages\builder\php\php\" />
     <Folder Include="Pages\Subscriber\" />
+    <Folder Include="Utility\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
