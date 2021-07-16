@@ -106,29 +106,31 @@
                                     <!-- Sign In Form -->
                                     <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _es6/pages/op_auth_signin.js) -->
                                     <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                    <form class="js-validation-signin" action="be_pages_auth_all.html" method="POST">
+                                    <form runat="server">
                                         <div class="py-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-lg form-control-alt" id="login-username" name="login-username" placeholder="Username">
+                                                <asp:TextBox class="form-control form-control-lg form-control-alt" id="txtUsername" name="login-username" placeholder="Username" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control form-control-lg form-control-alt" id="login-password" name="login-password" placeholder="Password">
+                                                <asp:TextBox TextMode="password" class="form-control form-control-lg form-control-alt" id="txtPassword" name="login-password" placeholder="Password" runat="server"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <div class="d-md-flex align-items-md-center justify-content-md-between">
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="login-remember" name="login-remember">
-                                                        <label class="custom-control-label font-w400" for="login-remember">Remember Me</label>
+                                                    <div class="custom-control custom-switch">                                                        
+                                                        <asp:CheckBox CssClass="custom-checkbox-rounded-circle" id="chkRemember" runat="server" Text="Remember Asp"/>
+                                                        
+                                                        
                                                     </div>
-                                                    <div class="py-2">
+                                                   <%-- <div class="py-2">
                                                         <a class="font-size-sm" href="op_auth_reminder2.html">Forgot Password?</a>
-                                                    </div>
+                                                    </div>--%>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group row justify-content-center mb-0">
                                             <div class="col-md-6 col-xl-5">
-                                                <button type="submit" class="btn btn-block btn-primary">
+                                                <asp:Label ID="lblError" ForeColor="red" runat="server"></asp:Label>
+                                                <button type="submit" class="btn btn-block btn-primary" id="btnLogin" runat="server" OnServerClick="btnLogin_OnServerClick">
                                                     <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Sign In
                                                 </button>
                                             </div>
