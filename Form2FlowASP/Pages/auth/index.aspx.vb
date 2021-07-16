@@ -5,25 +5,18 @@ Public Class index
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
-            Dim res as String = genfunctions.GenerateHash("sa")
-            'MsgBox(res)
-            'System.Diagnostics.Debug.WriteLine(res)
-            setConn()
+           setConn()
             If Request.Cookies("Email") Is Nothing And Request.Cookies("UserPassword") Is Nothing Then
 
             Else
                 chkRemember.Checked = True
                 txtUsername.Text = DecryptCookies(Request.Cookies("Email").Value)
-                'txtPasswords.Text = DecryptCookies(Request.Cookies("UserPassword").Value)
-                txtPassword.Text = DecryptCookies(Request.Cookies("UserPassword").Value)
-                'txtEmail.Value = DecryptCookies(Request.Cookies("Email").Value)
-                'txtPassword.Value = DecryptCookies(Request.Cookies("UserPassword").Value)
-
+                
+                txtPassword.Attributes("value") = DecryptCookies(Request.Cookies("UserPassword").Value)
+                
             End If
         End If
     End Sub
-
-
     Public Shared Function DecryptCookies(ByVal _cookie As String) As String
         Dim open_string = System.Convert.FromBase64String(_cookie)
         Return System.Text.Encoding.UTF8.GetString(open_string)
@@ -79,7 +72,35 @@ Public Class index
         End If
         Dim message As String = UserController.AuthenticateUser(username,password,conn)
         If message.Equals("Success") Then
+            'the remember me code
+            If chkRemember.Checked Then
+                Dim password_cookie As New HttpCookie("UserPassword")
+                Dim username_cookie As New HttpCookie("Email")
+                'password_cookie.Value = EncryptCookies(txtPassword.Value.ToString.Trim)
+                'username_cookie.Value = EncryptCookies(txtEmail.Value.ToString.Trim)
+                password_cookie.Value = EncryptCookies(txtPassword.Text.ToString.Trim)
+                username_cookie.Value = EncryptCookies(txtUsername.Text.ToString.Trim)
+                password_cookie.Expires = DateTime.Now.AddDays(14)
+                username_cookie.Expires = DateTime.Now.AddDays(14)
+
+                HttpContext.Current.Response.Cookies.Add(password_cookie)
+                HttpContext.Current.Response.Cookies.Add(username_cookie)
+            Else
+                Dim password_cookie As New HttpCookie("UserPassword")
+                Dim username_cookie As New HttpCookie("Email")
+                password_cookie.Expires = DateTime.Now.AddDays(-1)
+                username_cookie.Expires = DateTime.Now.AddDays(-1)
+            End If
             ' redirect to the page you need
+            Dim role As String = Session("role")
+            Select Case role.ToLower
+                Case "admin"
+                   
+                    Response.Redirect("../Admin/admin-dashboard.aspx")
+                Case "super admin"
+                    Response.Redirect("../Admin/admin-dashboard.aspx")
+                
+            End Select
             Else 
                 
                 lblError.Visible = True

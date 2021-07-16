@@ -17,7 +17,7 @@ Public Class UserController
             .Parameters.Add("@firstName_OUT", MySqlDbType.VarChar, 255)
             .Parameters.Add("@lastName_OUT", MySqlDbType.VarChar, 255)
             .Parameters.Add("@email_OUT", MySqlDbType.VarChar, 255)
-            .Parameters.Add("@role_OUT", MySqlDbType.Int32)
+            .Parameters.Add("@role_OUT", MySqlDbType.VarChar,255)
             
             .Parameters("@Authenticated").Direction = ParameterDirection.Output
             .Parameters("@userID_OUT").Direction = ParameterDirection.Output
