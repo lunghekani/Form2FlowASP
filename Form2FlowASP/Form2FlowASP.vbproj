@@ -5058,6 +5058,7 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Controllers\DatabaseController.vb" />
+    <Compile Include="Controllers\ProcessController.vb" />
     <Compile Include="Controllers\UserController.vb" />
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>

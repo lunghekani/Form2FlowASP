@@ -6,6 +6,10 @@ Public Class index
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
            setConn()
+            dim res as string = genfunctions.GenerateHash("sa")
+            dim test As String = Guid.NewGuid().ToString()
+            Debug.WriteLine(res)
+            Debug.WriteLine(test)
             If Request.Cookies("Email") Is Nothing And Request.Cookies("UserPassword") Is Nothing Then
 
             Else

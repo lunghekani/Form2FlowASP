@@ -12,4 +12,10 @@ Public Class genfunctions
         Return hash
 
     End Function
+
+    Public Shared Function GenerateGUID() 
+        Dim sguid as String 
+        sguid = System.Guid.NewGuid().ToString()
+        Return  sguid
+    End Function
 End Class

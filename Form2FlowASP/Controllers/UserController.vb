@@ -9,7 +9,7 @@ Public Class UserController
             .Connection = conn
             .CommandText = "Password_Verify"
             .CommandType = CommandType.StoredProcedure
-            .Parameters.AddWithValue("username_IN", username)
+            .Parameters.AddWithValue("UserName_IN", username)
             .Parameters.AddWithValue("userPass_IN", password)
 
             .Parameters.Add("@Authenticated", MySqlDbType.Int32)
@@ -43,6 +43,8 @@ Public Class UserController
                 HttpContext.Current.Session("username") = username
                 HttpContext.Current.Session("user_id") = userId
                 HttpContext.Current.Session("fullname") = firstName & " " & lastName
+                HttpContext.Current.Session("nickname") = firstName 
+
                 HttpContext.Current.Session("email") = email
                 HttpContext.Current.Session("role") = role
                 Return "Success"

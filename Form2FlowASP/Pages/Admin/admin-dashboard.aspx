@@ -14,8 +14,8 @@
 
                                     <span class="d-inline-block js-appear-enabled animated fadeIn" data-toggle="appear" data-timeout="350">
                                      
-                                        <a class="btn btn-primary px-4 py-2 js-click-ripple-enabled" data-toggle="click-ripple" href="javascript:void(0)" style="overflow: hidden; position: relative; z-index: 1;">
-                                            <i class="fa fa-plus mr-1"></i> New Project
+                                        <a class="btn btn-primary px-4 py-2 js-click-ripple-enabled" data-toggle="click-ripple" href="admin-process-create.aspx" style="overflow: hidden; position: relative; z-index: 1;">
+                                            <i class="fa fa-plus mr-1"></i> New Process
                                         </a>
                                     </span>
                                 </div>
